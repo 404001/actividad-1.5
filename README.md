@@ -78,4 +78,16 @@ Para ajustar los permisos nos vamos a fijar en la siguiente tabla de datos:
 | general/     | SI         | SI        | NO        |
 | exclusivo/   | SI         | NO        | NO        |
 
+Para asignar a un grupo un usuario es con el siguiente comando.
+
+```
+useradd <user> ventas/jefeventas
+```
+
+Luego para dar permisos sobre un archivo/carpeta tenemos q ejecutar el siguiente comando:
+
+```
+setfacl -m u:<user>:<perms> <directory/file>
+```
+
 
