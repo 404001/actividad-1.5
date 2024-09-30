@@ -35,14 +35,47 @@ groupadd ventas
 groupadd jefeventas
 ```
 
-### Crear directorios
+---
+
+### Crear directorios & archivos
 Para crear los directorios a los que los usuarios van a tener acceso tenemos q hacer lo siguiente:
 
 ```
 mkdir general
 mkdir exclusivo
 ```
+```
+touch file{1..4}.txt
+```
 
-###
+---
+
+### Cambiar las contraseñas de los users
+
+Para poder poner las contraseñas cifradas vamos a usar las contraseñas de antes generadas por `openssl` en base64 con una longitud de 12 caracteres, con el siguiente comando:
+
+```
+passwd <user>
+```
+Y te saldra un input para q pongas la contraseña y la confirmes:
+```
+Enter new UNIX password:
+Retype new UNIX password:
+```
+
+---
+
+### Ajustar los permisos
+
+Para ajustar los permisos nos vamos a fijar en la siguiente tabla de datos:
+
+|              | Lectura    | Escritura | Ejecucion |
+|--------------|------------|-----------|-----------|
+| File 1       | SI         | NO        | NO        |
+| File 2       | SI         | SI        | NO        |
+| File 3       | SI         | SI        | SI        |
+| File 4       | SI         | NO        | NO        |
+| general/     | SI         | SI        | NO        |
+| exclusivo/   | SI         | NO        | NO        |
 
 
