@@ -94,4 +94,14 @@ setfacl -m u:<user>:<perms> <directory/file>
 
 ![image](https://github.com/user-attachments/assets/e07c3f3b-37e6-433a-8348-8629637ddcb6)
 
+---
 
+## Actividad resuelta 1.2
+
+Crear un user llamdado `jeve_ventas` y ejecutar el siguiente comando para asignarle la contraseña:
+
+```
+passwd -n 10 -x 60 -w 3 -i 7 jefe_ventas
+```
+
+![image](https://github.com/user-attachments/assets/170e13b4-06c6-453e-a80c-9901bdfd62ed)
